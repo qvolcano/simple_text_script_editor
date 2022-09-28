@@ -1,6 +1,10 @@
 <html>
 
 <head>
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
     <style>
         html,
         body {
@@ -9,6 +13,31 @@
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
+        }
+
+        .param_label {
+            /* text-decoration: underline; */
+            color: green
+        }
+
+        .param_label0 {
+            /* text-decoration: underline; */
+            color: blue
+        }
+
+        .param_label1 {
+            /* text-decoration: underline; */
+            color: greenyellow;
+        }
+
+        .param_label:hover {
+            /* text-decoration: underline; */
+            color: red;
+        }
+
+        .param_label2 {
+            /* text-decoration: underline; */
+            color: purple
         }
 
         .dialog {
@@ -45,25 +74,31 @@
 </head>
 
 <body>
-    <a ondblclick="">
-        <div id="editor">
-        </div>
-        <div id="dialog" class="dialog" style="display: none;">
-            <div id="mask">
-            </div>
-            <form id="content" style="margin: 0 auto; width: 400px;height: 400px;background: grey;">
-                <select id="select">
-                </select>
-                <div id="desc"></div>
-                <div>
-                    <button type="submit">确定</button>
-                    <button>取消</button>
 
-                </div>
-            </form>
+    <div id="editor">
+    </div>
+    <div id="dialog" class="dialog" style="display: none;">
+        <div id="mask">
         </div>
-        <script src="./config.js"></script>
-        <script src="./index.js"></script>
+        <form id="content" style="margin: 0 auto; width: 400px;height: 400px;background: grey;">
+            <select id="select">
+            </select>
+            <div id="desc"></div>
+            <div>
+                <button id="btnConfirm" type="submit">确定</button>
+                <button id="btnCancel" type="button">取消</button>
+
+            </div>
+        </form>
+    </div>
+    <script src="./BlockConfig.js"></script>
+    <script src="./index.js"></script>
+    <!-- <script>
+            document.write("<script type='text/javascript' src='./config.js?ver=" + Math.random() + "'><\/script>");
+        </script>
+        <script>
+            document.write("<script type='text/javascript' src='./index.js?ver=" + Math.random() + "'><\/script>");
+        </script> -->
 
 </body>
 
